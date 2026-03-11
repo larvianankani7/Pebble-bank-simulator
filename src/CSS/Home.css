@@ -1,0 +1,93 @@
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(105.17deg, #A0E3B8 26.84%, #81BA95 41.91%, #42674D 64.02%, #27452E 87.05%);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.home-logo {
+  width: 100px;   
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+}
+.home-heading {
+  font-size: 4rem;  
+  color: #0d1b0d;
+  position: relative;
+  margin-bottom: 15px;
+  animation: fadeUp 1s ease forwards;
+}
+.home-heading::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 7px; 
+  background-color: #0d1b0d;
+  animation: expandLine 1s 1s forwards;
+}
+.home-text {
+  font-size: 2.8rem; 
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0;
+  animation: fadeUp 1s 1.5s ease forwards;
+}
+.button-container {
+  display: flex;
+  gap: 50px; 
+  align-items: center;
+  font-size: 2000px; 
+}
+.home-button {
+  padding: 25px 50px; 
+  border-radius: 45px;
+  border: none;
+  cursor: pointer;
+  background: rgba(47, 93, 60, 0.6);
+  color: #000;
+  font-weight: 600;
+  font-size: 1.8rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+  transition: all 0.3s ease;
+}
+.home-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  background: rgba(47, 93, 60, 0.8);
+}
+.button-divider {
+  font-size: 2.5rem;  
+  color: #000;
+  margin-top: -10px;
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes expandLine {
+  0% { width: 0%; }
+  100% { width: 180px; } 
+}
+@media (max-width: 768px) {
+  .home-heading { font-size: 3rem; }
+  .home-text { font-size: 1.5rem; }
+  .button-container { flex-direction: column; gap: 25px; }
+  .button-divider { display: none; }
+}

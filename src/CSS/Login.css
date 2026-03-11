@@ -1,0 +1,192 @@
+body{
+    background: linear-gradient(105.17deg, #A0E3B8 26.84%, #81BA95 41.91%, #42674D 64.02%, #27452E 87.05%);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+background:linear-gradient(120deg,#9fd3b5,#3c6b53,#1b3c2c);
+background-size:300% 300%;
+animation:bgMove 10s infinite alternate;
+}
+
+@keyframes bgMove{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+.container{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+/* LOGIN BOX */
+
+.loginBox{
+
+width:350px;
+padding:40px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.4);
+
+text-align:center;
+}
+
+.title{
+color:white;
+font-size:36px;
+font-weight:800;
+margin-bottom:30px;
+}
+
+/* INPUT */
+
+.input{
+
+width:100%;
+padding:12px;
+
+margin:10px 0;
+
+border-radius:10px;
+border:none;
+
+outline:none;
+font-size:16px;
+}
+
+/* LOGIN BUTTON */
+
+.loginButton{
+
+width:100%;
+padding:14px;
+
+margin-top:10px;
+
+border:none;
+border-radius:12px;
+
+font-size:18px;
+font-weight:700;
+
+cursor:pointer;
+
+background:linear-gradient(90deg,#355c49,#8fc4a6);
+
+transition:.3s;
+}
+
+.loginButton:hover{
+transform:scale(1.05);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* GRID */
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(2,260px);
+gap:80px;
+
+}
+
+/* BUTTON */
+
+.bankButton{
+
+height:100px;
+
+border-radius:30px;
+
+font-size:22px;
+font-weight:800;
+
+border:none;
+
+cursor:pointer;
+
+color:black;
+
+background:linear-gradient(90deg,#355c49,#8fc4a6);
+
+box-shadow:0px 10px 30px rgba(0,0,0,0.4);
+
+transition:all .35s ease;
+
+position:relative;
+overflow:hidden;
+
+}
+
+/* hover */
+
+.bankButton:hover{
+
+transform:translateY(-8px) scale(1.05);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.5),
+0 0 40px rgba(150,255,200,.4);
+
+}
+
+/* flash */
+
+.bankButton::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-100%;
+
+width:50%;
+height:100%;
+
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.6),
+transparent
+);
+
+transition:0.6s;
+
+}
+
+.bankButton:hover::after{
+left:120%;
+}
+
+/* smaller button */
+
+.small{
+margin-top:40px;
+width:200px;
+}
+
+/* page title */
+
+.pageTitle{
+color:white;
+font-size:48px;
+font-weight:800;
+}
